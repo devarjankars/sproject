@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" style="background:lightblue;">
+        <div>
+            <h1>Info About you</h1>
+            <label for="fname">Name:</label><br>
+            <input type="text" name="Name" id="name"><br>
+
+            <label for="fname">last Name:</label><br>
+            <input type="text" name="ls" id=" ls"><br>
+            <br>
+          <input type="button" value="Submit"  onmouseover="MouseOver(this);" onmouseout="MouseOut(this);">
+        </div>
+    </form>
+    
+<script>
+    function MouseOver(elem) {
+        elem.style.color = "lightpink";
+      }
+      
+      function MouseOut(elem) {
+        elem.style.color = "black";
+      }
+      let name=document.getElementById("name").value;
+      let mbn=document.getElementById("ls");
+      console.log("your name is "+name+"mobile no"+mbn);
+    
+    </script>
+    
+</body>
+</html>
