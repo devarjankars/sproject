@@ -34,3 +34,8 @@ let wtot=document.querySelector('header .container');
 let h1=document.querySelector('header h1');
 wtot.insertBefore(newTag , h1)
 console.log(p.parentElement);
+
+let btn=document.getElementById('btn').addEventListener('click', btnclk);
+ function btnclk(){
+     newTag.style.backgroundColor="yellow";
+ }
