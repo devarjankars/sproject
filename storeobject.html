@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Store Object in Local storage</h1>
+</body>
+<script>
+    let myobj={
+        name:"sanjay",
+        age: 45
+
+    };
+    let  myobj_st=JSON.stringify(myobj);// convert object into string readable format
+    localStorage.setItem("myobject", myobj_st);
+    console.log(localStorage);
+
+    //let convert back into object
+    let myobj_dst= JSON.parse(localStorage.getItem("myobject")) ;
+    console.log(myobj_dst);  
+
+</script>
+</html>
