@@ -6,32 +6,23 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="" style="background:lightblue;">
-        <div>
+    <form action="" style="background:gray;" class="center">
+        <div tyle="width:800px; margin:0 auto;" >
             <h1>Info About you</h1>
             <label for="fname">Name:</label><br>
-            <input type="text" name="Name" id="name"><br>
-
+            <input type="text" name="Name" id="fname"><br>
             <label for="fname">last Name:</label><br>
-            <input type="text" name="ls" id=" ls"><br>
+            <input type="text" name="ls" id="ls"><br>
+            <label for="fname">Enter Mail:</label><br>
+            <input type="email" name="Mail" id="Mail"><br>
+            <label for="fname">Mboile No:</label><br>
+            <input type="number" name="Mbn" id="Mbn">
             <br>
-          <input type="button" value="Submit"  onmouseover="MouseOver(this);" onmouseout="MouseOut(this);">
+          <input type="button" value="Submit" onclick="storedata()">
         </div>
     </form>
+  </body>
+<script src="store.js"></script>
     
-<script>
-    function MouseOver(elem) {
-        elem.style.color = "lightpink";
-      }
-      
-      function MouseOut(elem) {
-        elem.style.color = "black";
-      }
-      let name=document.getElementById("name").value;
-      let mbn=document.getElementById("ls");
-      console.log("your name is "+name+"mobile no"+mbn);
-    
-    </script>
-    
-</body>
+
 </html>
