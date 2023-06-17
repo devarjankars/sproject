@@ -11,14 +11,24 @@ function grab(){
     localStorage.setItem(Obj.mail,JSON.stringify(Obj));
     showobj(Obj)
 }
-
+    
    
 
     function showobj(Obj){
 
-        const lo=document.getElementById('itm');
-  //  let li =document.createElement('li');
-     lo.innerHTML=  lo.innerHTML+ `<li>  ${Obj.name} - ${Obj.mail} - ${Obj.age} </li>`
+let lo=document.getElementById('itm')
+    let li =document.createElement('li');
+    li.textContent=Obj.name+ " - "+Obj.mail +"  -" +Obj.age;
+    const button=document.createElement('input');
+    button.type='del';
+    button.value='delete';
+    button.onclick=()=>{
+        localStorage.removeItem(Obj.mail);
+        lo.removeChild(li);
+    }
 
-    //lo.appendChild(li);
+    lo.appendChild(li);
+    li.appendChild(button);
+
+
     }
