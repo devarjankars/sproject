@@ -9,26 +9,16 @@ function grab(){
         age
     }
     localStorage.setItem(Obj.mail,JSON.stringify(Obj));
-    showobj(Obj)
+    showobj()
 }
     
    
 
-    function showobj(Obj){
+    function showobj(){
 
-let lo=document.getElementById('itm')
+
     let li =document.createElement('li');
-    li.textContent=Obj.name+ " - "+Obj.mail +"  -" +Obj.age;
-    const button=document.createElement('input');
-    button.type='del';
-    button.value='delete';
-    button.onclick=()=>{
-        localStorage.removeItem(Obj.mail);
-        lo.removeChild(li);
-    }
+    li.innerHTML
 
     lo.appendChild(li);
-    li.appendChild(button);
-
-
     }
