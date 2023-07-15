@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appform</title>
+</head>
+<body>
+    <form onsubmit="saveToLocalStorage(event)">
+        <label>Name:</label>
+        <input type="text" name="uname"/>
+        <label>Email:</label>
+        <input type="email" name="email"/>
+        <label>Phone No::</label>
+        <input type="number" name="pno"/>
+        <button>Submit</button>
+        <ul id="list"></ul>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+<script>
+
+
+        function saveToLocalStorage(event){
+            event.preventDefault();
+            const name=event.target.uname.value;
+            const email=event.target.email.value;
+            const Pno=event.target.pno.value;
+            const obj={
+                name:name,
+                email:email,
+                Pno:Pno
+            }
+            axios.post("https://crudcrud.com/api/a560ecc75598454998c87515110f71c1/AppData",{obj})
+              .then(res=>{
+                console.log(res);
+              })
+
+            ShowOn(obj)
+        }
+
+
+        function ShowOn(obj){
+      const parent=document.getElementById('list')
+      parent.innerHTML= parent.innerHTML+`<li>${obj.name} -${obj.email} - ${obj.Pno}</li>`
+        }
+
+    </script>
+
+</body>
+</html>
